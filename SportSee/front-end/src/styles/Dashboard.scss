@@ -1,0 +1,10 @@
+@use './colors' as *;
+
+.dashboard {
+  //   background-color: aqua;
+  padding: 3rem 12rem;
+}
+
+.user-name {
+  color: $primary-color;
+}

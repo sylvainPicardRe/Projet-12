@@ -1,0 +1,33 @@
+.sidebar {
+  background-color: black;
+  width: 8rem;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  //   justify-content: center;
+  align-items: center;
+  &,
+  .nav {
+    margin: auto;
+    &__list {
+      padding: 0;
+      flex-direction: column;
+      gap: 10px;
+    }
+    &__item {
+      list-style: none;
+    }
+    &__image {
+      width: 50px;
+    }
+  }
+}
+
+.copyright {
+  font-size: 0.7rem;
+  rotate: 270deg;
+  margin: auto;
+}

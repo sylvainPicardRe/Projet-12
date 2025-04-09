@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "userInfos": {
+      "firstName": "Almanzo",
+      "lastName": "Wilder",
+      "age": 30
+    },
+    "todayScore": 0.12,
+    "keyData": {
+      "calorieCount": 1930,
+      "proteinCount": 155,
+      "carbohydrateCount": 290,
+      "lipidCount": 50
+    }
+  },
+  {
+    "id": 2,
+    "userInfos": {
+      "firstName": "Laura",
+      "lastName": "Ingalls",
+      "age": 25
+    },
+    "todayScore": 0.2,
+    "keyData": {
+      "calorieCount": 1560,
+      "proteinCount": 176,
+      "carbohydrateCount": 350,
+      "lipidCount": 10
+    }
+  }
+]
