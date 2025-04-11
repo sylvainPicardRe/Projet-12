@@ -12,7 +12,7 @@ function Sidebar() {
   return (
     <aside className="sidebar">
       <NavIcon iconList={iconList} />
-      <p className="copyright">Copyright SportSee 2025</p>
+      <div className="copyright">Copyright SportSee 2025</div>
     </aside>
   )
 }

@@ -1,22 +1,29 @@
+@use './index' as *;
+
 .header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: $header-height;
+  background-color: $black;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background-color: black;
-  gap: 5rem;
+  gap: 20px;
+  padding: 0 20px;
   &__nav {
-    flex: 1;
-    padding-right: 2rem;
-  }
-}
-.nav {
-  &__list {
     display: flex;
-
     justify-content: space-between;
-  }
-  &__item {
-    list-style: none;
+    padding: 0 2rem;
+    flex: 1;
+    gap: 20px;
+    & > a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

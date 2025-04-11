@@ -1,33 +1,26 @@
+@use './index' as *;
+
 .sidebar {
-  background-color: black;
-  width: 8rem;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  z-index: -1;
   display: flex;
   flex-direction: column;
-  //   justify-content: center;
   align-items: center;
-  &,
-  .nav {
-    margin: auto;
-    &__list {
-      padding: 0;
-      flex-direction: column;
-      gap: 10px;
-    }
-    &__item {
-      list-style: none;
-    }
-    &__image {
-      width: 50px;
-    }
+  width: $sidebar-width;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $black;
+  color: white;
+  padding-top: $header-height;
+  overflow: auto;
+  & > .nav {
+    padding-top: 10rem;
   }
 }
 
 .copyright {
-  font-size: 0.7rem;
-  rotate: 270deg;
-  margin: auto;
+  writing-mode: sideways-lr;
+
+  margin-top: auto;
+  padding: 1rem 0;
 }

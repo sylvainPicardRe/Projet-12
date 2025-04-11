@@ -1,15 +1,16 @@
-@use './colors' as *;
+@use './index.scss' as *;
 
 .dashboard {
-  //   background-color: aqua;
-  padding: 3rem 12rem;
-}
-
-.user-name {
-  color: $primary-color;
+  margin-top: $header-height;
+  margin-left: $sidebar-width;
+  padding: 20px;
+  height: calc(100vh - $header-height);
+  overflow-y: auto;
+  &__user {
+    color: $primary-color;
+  }
 }
 
 .charts-wrapper {
-  width: 100%;
-  height: 100%;
+  margin-top: 2rem;
 }

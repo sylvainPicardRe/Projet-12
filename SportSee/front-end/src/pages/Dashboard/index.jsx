@@ -19,14 +19,15 @@ function Dashboard() {
       <Header />
       <main className="dashboard">
         <DashboardHeader userId={userId} />
-        <section className="dashboard__datas">
-          <div className="charts-wrapper">
-            {/* <UserActivity userId={userId} />
-            <UserAverage userId={userId} />
+
+        <section className="charts-wrapper">
+          <UserActivity userId={userId} />
+          <div></div>
+        </section>
+
+        {/*}    <UserAverage userId={userId} />
             <UserPerformance userId={userId} />
             <UserScore userId={userId} /> */}
-          </div>
-        </section>
 
         {/*<p>{userData.keyData.calorieCount}Cal</p>
         <p>{userData.keyData.proteinCount}g</p>

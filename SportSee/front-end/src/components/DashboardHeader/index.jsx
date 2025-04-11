@@ -33,8 +33,10 @@ function DashboardHeader({ userId }) {
   return (
     <header className="dashboard__header">
       <h1 className="dashboard__title">
-        Bonjour, <span className="user-name">{user.userInfos.firstName}</span>
+        Bonjour,{' '}
+        <span className="dashboard__user">{user.userInfos.firstName}</span>
       </h1>
+      <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
     </header>
   )
 }

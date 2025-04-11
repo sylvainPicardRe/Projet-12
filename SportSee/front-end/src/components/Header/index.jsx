@@ -9,28 +9,21 @@ function Header() {
     <header className="header">
       <img src={logo} alt="logo du site SportSee" className="header__logo" />
       <nav className="header__nav nav">
-        <ul className="nav__list">
-          <li className="nav__item">
-            <Link to={'#'} className="nav__link">
-              Accueil
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link to={'#'} className="nav__link">
-              Profil
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link to={'#'} className="nav__link">
-              Réglages
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link to={'#'} className="nav__link">
-              Communauté
-            </Link>
-          </li>
-        </ul>
+        <Link to={'#'} className="nav__link">
+          Accueil
+        </Link>
+
+        <Link to={'#'} className="nav__link">
+          Profil
+        </Link>
+
+        <Link to={'#'} className="nav__link">
+          Réglages
+        </Link>
+
+        <Link to={'#'} className="nav__link">
+          Communauté
+        </Link>
       </nav>
     </header>
   )
