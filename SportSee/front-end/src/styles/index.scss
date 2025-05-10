@@ -11,6 +11,8 @@ $header-height: 60px;
 
 $primary-color: #e60000;
 $black: #020203;
+$background-grey: #fbfbfb;
+$background-black: #282d30;
 
 body html {
   height: 100%;
@@ -22,6 +24,6 @@ li {
 }
 
 .root {
-  display: flex;
-  height: 100vh;
+  min-width: 1024px;
+  min-height: 780px;
 }

@@ -1,0 +1,18 @@
+@use 'index.scss' as *;
+
+.nutrient {
+  display: flex;
+  background-color: $background-grey;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  &__icon {
+    width: 3rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

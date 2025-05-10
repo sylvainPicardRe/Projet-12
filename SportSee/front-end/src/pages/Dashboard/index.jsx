@@ -4,11 +4,12 @@ import Header from '../../components/Header'
 import Sidebar from '../../components/Sidebar'
 import DashboardHeader from '../../components/DashboardHeader'
 import UserActivity from '../../components/UserActivity'
-import UserAverage from '../../components/UserAverage'
-import UserPerformance from '../../components/UserPerformance'
+import AverageChart from '../../components/AverageChart'
+import PerformanceChart from '../../components/PerformanceChart'
+import ScoreChart from '../../components/ScoreChart'
+import UserAside from '../../components/UserActivityState'
 
 import '../../styles/Dashboard.scss'
-import UserScore from '../../components/UserScore'
 
 function Dashboard() {
   const { userId } = useParams()
@@ -19,21 +20,27 @@ function Dashboard() {
       <Header />
       <main className="dashboard">
         <DashboardHeader userId={userId} />
+        <section>
+          <div className="charts-wrapper">
+            <UserActivity userId={userId} />
 
-        <section className="charts-wrapper">
-          <UserActivity userId={userId} />
-          <div></div>
+            <div className="dashboard-grid">
+              <AverageChart userId={userId} />
+              <PerformanceChart userId={userId} />
+              <ScoreChart userId={userId} />
+            </div>
+          </div>
+          <UserAside userId={userId} />
         </section>
-
-        {/*}    <UserAverage userId={userId} />
-            <UserPerformance userId={userId} />
-            <UserScore userId={userId} /> */}
-
-        {/*<p>{userData.keyData.calorieCount}Cal</p>
-        <p>{userData.keyData.proteinCount}g</p>
-        <p>{userData.keyData.carbohydrateCount}g</p>
-        <p>{userData.keyData.lipidCount}g</p>
-*/}
+        {/*<div className="dashboard__datas">
+            <div className="charts-wrapper__principal">
+          <section className="charts-wrapper">
+            </div>
+            <div className="charts-wrapper__additional">
+            </div>
+          </section>
+        </div>{' '}
+        */}
       </main>
     </>
   )

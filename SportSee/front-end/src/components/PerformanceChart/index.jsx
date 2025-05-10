@@ -6,11 +6,10 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  PolarRadiusAxis,
   Radar,
 } from 'recharts'
 
-function UserPerformance({ userId }) {
+function PerformanceChart({ userId }) {
   const [UserPerformance, setUserPerformance] = useState(null)
   const [loadig, setLoading] = useState(true)
   useEffect(() => {
@@ -66,18 +65,19 @@ function UserPerformance({ userId }) {
   }
 
   return (
-    <ResponsiveContainer width="100%" height={300}>
-      <RadarChart
-        outerRadius={90}
-        width={730}
-        height={250}
-        data={reformattedData.performance}
-      >
-        <PolarGrid />
-        <PolarAngleAxis dataKey="kind" tickFormatter={formatKind} />
-        <Radar name="kind" dataKey="value" />
-      </RadarChart>
-    </ResponsiveContainer>
+    <div className="radar-chart">
+      <ResponsiveContainer width="100%" height="100%">
+        <RadarChart
+          outerRadius={80}
+          data={reformattedData.performance}
+          aspect={1}
+        >
+          <PolarGrid />
+          <PolarAngleAxis dataKey="kind" tickFormatter={formatKind} />
+          <Radar name="kind" dataKey="value" fill="#E60000" opacity={0.7} />
+        </RadarChart>
+      </ResponsiveContainer>
+    </div>
   )
 }
-export default UserPerformance
+export default PerformanceChart

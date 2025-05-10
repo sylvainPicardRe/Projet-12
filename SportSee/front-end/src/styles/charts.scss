@@ -1,0 +1,33 @@
+@use 'index.scss' as *;
+
+.chart {
+  background-color: $background-grey;
+  & > .chart__title {
+    position: absolute;
+    padding: 1rem;
+  }
+}
+
+.chart-card,
+.radar-chart,
+.line-chart {
+  min-width: 150px;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.line-chart {
+  background-color: #f60000;
+  & > .chart__title {
+    color: white;
+  }
+}
+.radar-chart {
+  background-color: $background-black;
+}
+.chart-card {
+  background-color: $background-grey;
+}
+.score {
+  text-align: center;
+}

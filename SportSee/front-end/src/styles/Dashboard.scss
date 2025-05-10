@@ -1,16 +1,41 @@
 @use './index.scss' as *;
+@use './charts.scss' as *;
 
 .dashboard {
   margin-top: $header-height;
   margin-left: $sidebar-width;
+  padding-left: $sidebar-width / 2 !important;
+  margin-right: $sidebar-width / 3;
   padding: 20px;
   height: calc(100vh - $header-height);
   overflow-y: auto;
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
   &__user {
     color: $primary-color;
+  }
+  & > section {
+    margin-top: 2rem;
+    display: flex !important;
+    width: 100%;
+    gap: 2rem;
   }
 }
 
 .charts-wrapper {
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  gap: 2rem;
+}
+
+.nutrients-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
