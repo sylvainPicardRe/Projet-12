@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { fetchUserById } from '../../services/api'
 
 function DashboardHeader({ userId }) {
   const [user, setUser] = useState(null)
-  const [loadig, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
     const getUserData = async () => {
       try {
@@ -23,7 +23,7 @@ function DashboardHeader({ userId }) {
     }
   }, [userId])
 
-  if (loadig) {
+  if (loading) {
     return <div>Chargment des données...</div>
   }
 
