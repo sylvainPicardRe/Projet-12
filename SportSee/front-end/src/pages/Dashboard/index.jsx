@@ -32,15 +32,6 @@ function Dashboard() {
           </div>
           <UserAside userId={userId} />
         </section>
-        {/*<div className="dashboard__datas">
-            <div className="charts-wrapper__principal">
-          <section className="charts-wrapper">
-            </div>
-            <div className="charts-wrapper__additional">
-            </div>
-          </section>
-        </div>{' '}
-        */}
       </main>
     </>
   )
